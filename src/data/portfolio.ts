@@ -22,7 +22,7 @@ export const PORTFOLIO_DATA = {
   identity: {
     name: 'JUDA',
     role: 'BOSS',
-    photo: '/juda-photo.jpg',
+    photo: `${import.meta.env.BASE_URL}juda-photo.jpg`,
     subtitle: 'AI Prompter, Pengembang AI & AI Product Builder',
     badgeId: 'JD-0001-BOSS',
     clearance: 'AI DEVELOPER // PRODUCT BUILDER',

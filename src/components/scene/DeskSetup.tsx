@@ -240,13 +240,14 @@ export const DeskSetup = memo(function DeskSetup({
     [selectedProject]
   )
 
-  // Preloaded textures via drei useTexture (ready on frame 1, never disappear on refresh)
-  const wallPhotoTexture = useTexture('/wall-photo.jpg')
+  // Preloaded textures via drei useTexture (BASE_URL-safe for GitHub Pages & Vercel)
+  const baseUrl = import.meta.env.BASE_URL
+  const wallPhotoTexture = useTexture(`${baseUrl}wall-photo.jpg`)
   const holoTextures = useTexture([
-    '/holo-1.jpg',
-    '/holo-2.jpg',
-    '/holo-3.jpg',
-    '/holo-4.jpg',
+    `${baseUrl}holo-1.jpg`,
+    `${baseUrl}holo-2.jpg`,
+    `${baseUrl}holo-3.jpg`,
+    `${baseUrl}holo-4.jpg`,
   ])
 
   useEffect(() => {
